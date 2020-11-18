@@ -1,0 +1,42 @@
+----------------------------------------------------------------------------------
+# 메인 페이지 폼보기 요청
+요청내용 : /cls/pre/main.cls
+파라미터 : 무
+컨트롤러 : com.increpas.cls.controller.MainController
+뷰	  : /WEB-INF/views/com/increpas/cls/main.jsp
+----------------------------------------------------------------------------------
+# 로그인 페이지 폼보기 요청
+요청내용 : /cls/day03/login.cls
+파라미터 : 무
+컨트롤러 : com.increpas.cls.controller.member.Login
+뷰	  : /WEB-INF/views/dcom/increpas/cls/Login.jsp
+----------------------------------------------------------------------------------
+# 로그인 처리 요청
+요청내용 : /cls/member/loginProc.cls
+파라미터 : id, pw
+컨트롤러 : com.increpas.cls.controller.member.LoginProc
+뷰	  : redirect ]
+			성공 : /cls/main.cls
+			실패 : /cls/member/login.cls
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+# 로그아웃 처리 요청
+요청내용 : /cls/member/logout.cls
+파라미터 : 무
+컨트롤러 : com.increpas.cls.controller.member.Logout
+뷰	  : redirect ] /cls/member/login.cls
+----------------------------------------------------------------------------------
+# 회원가입 폼 보기 요청
+요청내용 : /cls/member/join.cls
+파라미터 : 무
+컨트롤러 : com.increpas.cls.controller.member.join
+뷰	  : /WEB-INF/views/dcom/increpas/cls/Join.jsp
+----------------------------------------------------------------------------------
+# 회원가입 처리 요청
+요청내용 : /cls/member/joinProc.cls
+파라미터 : name, id, pw, mail, tel, gen, avt
+컨트롤러 : com.increpas.cls.controller.member.joinProc
+뷰	  : redirect ] 
+				성공 : /cls/main.cls
+				실패 : /cls/member/join.cls
+----------------------------------------------------------------------------------
